@@ -1,3 +1,23 @@
 blockquote {
   font-style: italic
 }
+
+#watermark {
+  height: 450px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#watermark img {
+  max-width: 100%;
+}
+#watermark p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 18px;
+  pointer-events: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+}
