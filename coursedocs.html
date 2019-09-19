@@ -420,6 +420,29 @@ div.tocify {
 <h3>Sept. 19</h3>
 <p><a href="sta305-2019sept19-class5.pdf">Class slides</a></p>
 <p><a href="sta305-2019sept19-class5-inclass.pdf">Class slides - inclass</a></p>
+<p>Live coding demo from class examined each line from the R code below.</p>
+<pre class="r"><code>library(BHH2) 
+data(shoes.data) 
+shoes.data
+
+diff &lt;- shoes.data$matA-shoes.data$matB
+
+N &lt;- 2^(10) # number of treatment assignments
+res &lt;- numeric(N) #vector to store results
+LR &lt;- list(c(-1,1)) # difference is multiplied by -1 or 1 # generate all possible treatment assign
+trtassign &lt;- expand.grid(rep(LR, 10))
+for (i in 1:N) {
+  res[i] &lt;- mean(as.numeric(trtassign[i,])*diff) }
+trtassign[1:2,]
+
+trtassign
+dim(trtassign)
+
+meandiff &lt;- mean(diff)
+
+res &lt;= meandiff
+
+sum(res &lt;= meandiff)</code></pre>
 </div>
 </div>
 </div>
