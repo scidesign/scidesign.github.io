@@ -1,0 +1,23 @@
+---
+title: "Sample Draft Proposal"
+author: "A. Student"
+date: "18/10/2019"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Objectives
+
+Add objectives here.
+
+# Methods
+
+Add methods here.
+
+# Statistical Analysis Plan
+
+Add analysis plan here.
