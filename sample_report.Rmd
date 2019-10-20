@@ -1,0 +1,26 @@
+---
+title: "Sample Project Report"
+author: "A. Student"
+date: "05/12/2019"
+output: 
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+# place your setup codes here
+# e.g., loading library, display setup, etc.
+# library(kableExtra) # useful for formatting pdf tables
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Description
+
+Add project description here.
+
+# Analysis
+
+Add analysis method and results here.
+
+# Conclusions
+
+Add conclusions here.
