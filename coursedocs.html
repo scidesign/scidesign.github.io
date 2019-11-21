@@ -590,6 +590,21 @@ head(tab0401) # print first 6 rows of data frame</code></pre>
 <div id="week-11" class="section level2">
 <h2>Week 11</h2>
 <p><a href="sta305-class17-21Nov2019.pdf">Class slides</a></p>
+<p><a href="sta305-class17-21nov2019-inclass.pdf">Class slides - inclass</a></p>
+<p>A plot of the <span class="math inline">\(N(0,1)\)</span> and Studentized range (comparing <code>k=4</code> means with <code>df=20</code>) CDFs.</p>
+<pre class="r"><code>p &lt;- seq(-4, 6, by =0.01) # generate a sequence of points
+
+plot(p, pnorm(p), type = &quot;l&quot;, ylab = expression(P(X&lt;= x)), 
+     xlab = &quot;x&quot;, col= &quot;black&quot;,lty = 1, 
+     main = &quot;Comparison of Normal and Studentized Range CDFs&quot;); # plot normal CDF
+
+# add Studentized range cdf
+points(p, ptukey(p,nmeans = 4, df = 20, lower.tail = T), col = &quot;blue&quot;, type = &quot;l&quot;, lty = 2); 
+
+# add plot legend
+legend(&quot;topleft&quot;, col = c(&quot;black&quot;,&quot;blue&quot;), lty = 1:2, 
+       legend = c(&quot;Normal&quot;,&quot;Studentized, k = 4, df =20&quot;))</code></pre>
+<p><img src="coursedocs_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 </div>
 
