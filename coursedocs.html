@@ -11,9 +11,9 @@
 
 
 
-<title>Sample Course Documents</title>
+<title>Course Documents</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -244,13 +244,458 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Sample Course Documents</h1>
+<h1 class="title toc-ignore">Course Documents</h1>
 
 </div>
 
 
+<p><br></p>
+<div id="class-slides-and-documents" class="section level1">
+<h1>Class Slides and Documents</h1>
+<p>Class slides and documents will be posted here.</p>
+<div id="week-1" class="section level2">
+<h2>Week 1</h2>
+<div id="sept.-5" class="section level3">
+<h3>Sept. 5</h3>
+<p><a href="sta305-19sept5-class1_posted.pdf">Class slides</a></p>
+<p><a href="sta305-19sept5-class1-inclass.pdf">Class slides - in
+class</a></p>
+</div>
+</div>
+<div id="week-2" class="section level2">
+<h2>Week 2</h2>
+<div id="sept.-10" class="section level3">
+<h3>Sept. 10</h3>
+<p><a href="class2-10sept19.pdf">Class slides</a></p>
+<p><a href="class2-10sept19-inclass.pdf">Class slides - inclass</a></p>
+</div>
+<div id="sept.-12" class="section level3">
+<h3>Sept. 12</h3>
+<p><a href="class3slides-12sept2019.pdf">Class slides</a></p>
+<p><a href="class3slides-12sept2019-inclass.pdf">Class slides - in
+class</a></p>
+</div>
+</div>
+<div id="week-3" class="section level2">
+<h2>Week 3</h2>
+<div id="sept.-17" class="section level3">
+<h3>Sept. 17</h3>
+<p><a href="class4slides-17sept19.pdf">Class slides</a></p>
+<p><a href="class4slides-17sept19-inclass.pdf">Class slides -
+inclass</a></p>
+</div>
+<div id="sept.-19" class="section level3">
+<h3>Sept. 19</h3>
+<p><a href="sta305-2019sept19-class5.pdf">Class slides</a></p>
+<p><a href="sta305-2019sept19-class5-inclass.pdf">Class slides -
+inclass</a></p>
+<p>Live coding demo from class examined each line from the R code
+below.</p>
+<pre class="r"><code>library(BHH2) 
+data(shoes.data) 
+shoes.data
+
+diff &lt;- shoes.data$matA-shoes.data$matB
+
+N &lt;- 2^(10) # number of treatment assignments
+res &lt;- numeric(N) #vector to store results
+LR &lt;- list(c(-1,1)) # difference is multiplied by -1 or 1 # generate all possible treatment assign
+trtassign &lt;- expand.grid(rep(LR, 10))
+for (i in 1:N) {
+  res[i] &lt;- mean(as.numeric(trtassign[i,])*diff) }
+trtassign[1:2,]
+
+trtassign
+dim(trtassign)
+
+meandiff &lt;- mean(diff)
+
+res &lt;= meandiff
+
+sum(res &lt;= meandiff)</code></pre>
+</div>
+</div>
+<div id="week-4" class="section level2">
+<h2>Week 4</h2>
+<div id="sept.-24" class="section level3">
+<h3>Sept. 24</h3>
+<p><a href="sta305-2019sept24-class6.pdf">Class slides</a></p>
+<p><a href="sta305-2019sept24-class6-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+<div id="sept.-26" class="section level3">
+<h3>Sept. 26</h3>
+<p><a href="sta305-2019sept26-class7.pdf">Class slides</a></p>
+<p><a href="sta305-2019sept26-class7-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+</div>
+<div id="week-5" class="section level2">
+<h2>Week 5</h2>
+<div id="oct.-1" class="section level3">
+<h3>Oct. 1</h3>
+<p><a href="sta305-2019oct1-class8.pdf">Class slides</a></p>
+<p><a href="sta305-2019oct1-class8-inclass.pdf">Class slides -
+inclass</a></p>
+</div>
+</div>
+<div id="week-6" class="section level2">
+<h2>Week 6</h2>
+<div id="oct.-8" class="section level3">
+<h3>Oct. 8</h3>
+<p>Midterm test #1</p>
+</div>
+<div id="oct.-10" class="section level3">
+<h3>Oct. 10</h3>
+<p><a href="sta305-10oct2019-class9.pdf">Class slides</a></p>
+<p><a href="sta305-10oct2019-class9-inclass.pdf">Class slides -
+inclass</a></p>
+<div id="background-on-angrist-and-lavy-study" class="section level4">
+<h4>Background on Angrist and Lavy Study</h4>
+<p><a href="https://en.wikipedia.org/wiki/Maimonides%27_rule">Wikepia
+article on Maimonides’ Rule</a></p>
+<p><a href="https://economics.mit.edu/files/8273">Using Maimonides’ Rule
+to Estimate the Effect of Class Size on Scholastic Achievement</a></p>
+</div>
+</div>
+</div>
+<div id="week-7" class="section level2">
+<h2>Week 7</h2>
+<div id="oct.-15" class="section level3">
+<h3>Oct. 15</h3>
+<p><a href="sta305-15Oct2019-class10.pdf">Class slides</a></p>
+<p><a href="sta305-15Oct2019-class10-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+<div id="oct.-17" class="section level3">
+<h3>Oct. 17</h3>
+<p><a href="sta305-17Oct2019-class11.pdf">Class slides</a></p>
+<p><a href="sta305-17Oct2019-class11-inclass.pdf">Class slides -
+inclass</a></p>
+<p>The data used in class from <a
+href="https://wwwn.cdc.gov/nchs/nhanes/nhefs/default.aspx/">NHEFS
+Survey</a> is available <a href="nhefshw2dat.csv">nhefshw2dat.csv</a>.
+The R code to read the data into an R data frame, and create the
+covariates used in the analyses done in class is below.</p>
+<pre class="r"><code># Read the data into a data frame
+#
+nhefshwdat &lt;- read.csv(&quot;nhefshw2dat.csv&quot;)
+
+# Define the variables used in the propensity score model
+#
+years1 &lt;- mean(nhefshwdat$age[nhefshwdat$qsmk == 1])
+years0 &lt;- mean(nhefshwdat$age[nhefshwdat$qsmk == 0])
+male1 &lt;- 100 * mean(nhefshwdat$sex[nhefshwdat$qsmk == 1] == 0)
+male0 &lt;- 100 * mean(nhefshwdat$sex[nhefshwdat$qsmk == 0] == 0)
+white1 &lt;- 100 * mean(nhefshwdat$race[nhefshwdat$qsmk == 1] == 0)
+white0 &lt;- 100 * mean(nhefshwdat$race[nhefshwdat$qsmk == 0] == 0)
+university1 &lt;- 100 * mean(nhefshwdat$education.code[nhefshwdat$qsmk == 1] == 5)
+university0 &lt;- 100 * mean(nhefshwdat$education.code[nhefshwdat$qsmk == 0] == 5)
+kg1 &lt;- mean(nhefshwdat$wt71[nhefshwdat$qsmk == 1])
+kg0 &lt;- mean(nhefshwdat$wt71[nhefshwdat$qsmk == 0])
+cigs1 &lt;- mean(nhefshwdat$smokeintensity[nhefshwdat$qsmk == 1])
+cigs0 &lt;- mean(nhefshwdat$smokeintensity[nhefshwdat$qsmk == 0])
+smoke1 &lt;- mean(nhefshwdat$smokeyrs[nhefshwdat$qsmk == 1])
+smoke0 &lt;- mean(nhefshwdat$smokeyrs[nhefshwdat$qsmk == 0])
+noexer1 &lt;- 100 * mean(nhefshwdat$exercise[nhefshwdat$qsmk == 1] == 2)
+noexer0 &lt;- 100 * mean(nhefshwdat$exercise[nhefshwdat$qsmk == 0] == 2)
+inactive1 &lt;- 100 * mean(nhefshwdat$active[nhefshwdat$qsmk == 1] == 2)
+inactive0 &lt;- 100 * mean(nhefshwdat$active[nhefshwdat$qsmk == 0] == 2)</code></pre>
+</div>
+</div>
+<div id="week-8" class="section level2">
+<h2>Week 8</h2>
+<div id="oct.-22" class="section level3">
+<h3>Oct. 22</h3>
+<p><a href="sta305-class12-22oct19.pdf">Class slides</a></p>
+<p><a href="sta305-class12-22oct19-inclass.pdf">Class slides
+-inclass</a></p>
+<p>Data from the blood coagualtion study is <a
+href="tab0401.dat">here</a>, and can be read into an R data frame using
+the floowing code:</p>
+<pre class="r"><code>tab0401 &lt;- read.table(&quot;tab0401.dat&quot;, header=TRUE, quote=&quot;\&quot;&quot;)
+head(tab0401) # print first 6 rows of data frame</code></pre>
+<pre><code>##   run diets  y
+## 1  20     A 62
+## 2   2     A 60
+## 3  11     A 63
+## 4  10     A 59
+## 5   5     A 63
+## 6  24     A 59</code></pre>
+</div>
+<div id="oct.-24" class="section level3">
+<h3>Oct. 24</h3>
+<p><a href="sta305-oct24-2019-class13.pdf">Class slides</a></p>
+<p><a href="sta305-oct24-2019-class13-inclass.pdf">Class slides -
+inclass</a></p>
+<p><a href="sta305-inclassproblem-24Oct2019.pdf">In class
+problem</a></p>
+</div>
+</div>
+<div id="week-9" class="section level2">
+<h2>Week 9</h2>
+<div id="oct.-29" class="section level3">
+<h3>Oct. 29</h3>
+<p><a href="sta305-class14-29oct2019.pdf">Class slides</a></p>
+<p><a href="sta305-class14-29oct2019-inclass.pdf">Class slides -
+inclass</a></p>
+</div>
+<div id="Oct31" class="section level3">
+<h3>Oct. 31</h3>
+<p><a href="sta305-class15-31oct2019.pdf">Class slides</a></p>
+<p>Data files: <a href="pilotplant.xlsx">pilotplant.xlsx</a>; <a
+href="tab0502.dat">tab0502.dat</a>; <a
+href="tab0503.dat">tab0503.dat</a></p>
+<p><a href="sta305-class15-31oct2019-inclass.pdf">Class slides -
+inclass</a></p>
+</div>
+</div>
+<div id="week-10" class="section level2">
+<h2>Week 10</h2>
+<div id="nov.-12" class="section level3">
+<h3>Nov. 12</h3>
+<p><a href="sta305-class16-7Nov2019.pdf">Class slides</a></p>
+<p><a href="sta305-class16-7nov2019-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+</div>
+<div id="week-11" class="section level2">
+<h2>Week 11</h2>
+<div id="nov.-21" class="section level3">
+<h3>Nov. 21</h3>
+<p><a href="sta305-class17-21Nov2019.pdf">Class slides</a></p>
+<p><a href="sta305-class17-21nov2019-inclass.pdf">Class slides -
+inclass</a></p>
+<p>A plot of the <span class="math inline">\(N(0,1)\)</span> and
+Studentized range (comparing <code>k=4</code> means with
+<code>df=20</code>) CDFs.</p>
+<pre class="r"><code>p &lt;- seq(-4, 6, by =0.01) # generate a sequence of points
+
+plot(p, pnorm(p), type = &quot;l&quot;, ylab = expression(P(X&lt;= x)), 
+     xlab = &quot;x&quot;, col= &quot;black&quot;,lty = 1, 
+     main = &quot;Comparison of Normal and Studentized Range CDFs&quot;); # plot normal CDF
+
+# add Studentized range cdf
+points(p, ptukey(p,nmeans = 4, df = 20, lower.tail = T), col = &quot;blue&quot;, type = &quot;l&quot;, lty = 2); 
+
+# add plot legend
+legend(&quot;topleft&quot;, col = c(&quot;black&quot;,&quot;blue&quot;), lty = 1:2, 
+       legend = c(&quot;Normal&quot;,&quot;Studentized, k = 4, df =20&quot;))</code></pre>
+<p><img src="coursedocs_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+</div>
+<div id="week-12" class="section level2">
+<h2>Week 12</h2>
+<div id="nov.-26" class="section level3">
+<h3>Nov. 26</h3>
+<p><a href="sta305-class18-26Nov2019.pdf">Class slides</a></p>
+<p><a href="sta305-class18-26nov2019-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+<div id="nov.-28" class="section level3">
+<h3>Nov. 28</h3>
+<p><a href="sta305-class19-2019nov28.pdf">Class slides</a></p>
+<p><a href="sta305-class19-2019nov28-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+</div>
+<div id="week-13" class="section level2">
+<h2>Week 13</h2>
+<div id="dec.-3" class="section level3">
+<h3>Dec. 3</h3>
+<p><a href="sta305-class20-2019dec3.pdf">Class slides</a></p>
+<p><a href="sta305-class20-2019dec3-inclass.pdf">Class slides
+-inclass</a></p>
+</div>
+<div id="calculating-standard-errors-in-2k-factorial-designs"
+class="section level3">
+<h3>Calculating Standard Errors in <span
+class="math inline">\(2^k\)</span> Factorial Designs</h3>
+<p>Consider the data from a replicated <span
+class="math inline">\(2^3\)</span> design from class 14.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">run</th>
+<th align="right">T</th>
+<th align="right">C</th>
+<th align="right">K</th>
+<th align="right">y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">59</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">74</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">69</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">81</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">46</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">79</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">61</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">70</td>
+</tr>
+<tr class="odd">
+<td align="right">16</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">58</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">67</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="right">-1</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">54</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="right">1</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">85</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">44</td>
+</tr>
+<tr class="even">
+<td align="right">15</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">81</td>
+</tr>
+</tbody>
+</table>
+<p>The factorial effects for <code>T</code> <code>C</code>
+<code>K</code> are twice the regression coefficients: <span
+class="math inline">\(2\hat \beta_i\)</span>. So, the standard error of
+the factorial estimates are</p>
+<p><span class="math display">\[s.e.(2\hat \beta_i)=\sqrt
+{Var(2\hat\beta_i)}=\sqrt
+{4Var(\hat\beta_i)}=2\sqrt{Var(\hat\beta_i)}=2s.e.(\hat
+\beta_i)\]</span></p>
+<pre class="r"><code>fact.mod &lt;- lm(y ~ T*C*K, data = tab0503)
+summary(fact.mod)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = y ~ T * C * K, data = tab0503)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+##  -4.00  -1.25   0.00   1.25   4.00 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  6.425e+01  7.071e-01  90.863 2.40e-13 ***
+## T            1.150e+01  7.071e-01  16.263 2.06e-07 ***
+## C           -2.500e+00  7.071e-01  -3.536 0.007670 ** 
+## K            7.500e-01  7.071e-01   1.061 0.319813    
+## T:C          7.500e-01  7.071e-01   1.061 0.319813    
+## T:K          5.000e+00  7.071e-01   7.071 0.000105 ***
+## C:K          7.216e-16  7.071e-01   0.000 1.000000    
+## T:C:K        2.500e-01  7.071e-01   0.354 0.732810    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 2.828 on 8 degrees of freedom
+## Multiple R-squared:  0.9763, Adjusted R-squared:  0.9555 
+## F-statistic: 47.05 on 7 and 8 DF,  p-value: 7.071e-06</code></pre>
+<p>For example, the factorial estimate for <code>T</code> is <span
+class="math inline">\(2\times 11.5 = 23\)</span>, and the standard error
+of the factorial estimates are: <span class="math inline">\(2 \times
+.7071=1.412\)</span>. Confidence intervals for the factorial estiamtes
+are:</p>
+<pre class="r"><code>2*confint(fact.mod)</code></pre>
+<pre><code>##                  2.5 %     97.5 %
+## (Intercept) 125.238818 131.761182
+## T            19.738818  26.261182
+## C            -8.261182  -1.738818
+## K            -1.761182   4.761182
+## T:C          -1.761182   4.761182
+## T:K           6.738818  13.261182
+## C:K          -3.261182   3.261182
+## T:C:K        -2.761182   3.761182</code></pre>
+<p>See <a href="#Oct31">Oct. 31 slides - class 14</a>.</p>
+</div>
+</div>
+</div>
 
 
+<br> <br>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 
 </div>
